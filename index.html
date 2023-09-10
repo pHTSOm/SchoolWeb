@@ -46,6 +46,29 @@
         </div>
         <div class="menu-btn"></div>
     </header>
+    
+    <section class="section-home">
+        <h1>Welcome.</h1>
+    </section>
+    <section class="section-two">
+        <h2>Responsive Header Navigation-Menu<br>With Dropdowns</h2>
+        <p> Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Aspernatur magni, ad eligendi alias odio ratione necessitatibus
+            libero officiis illum iste corrupti exercitationem esse itaque
+            placeat rem sint sed soluta minus!.</p>
+        <p> Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Aspernatur magni, ad eligendi alias odio ratione necessitatibus
+            libero officiis illum iste corrupti exercitationem esse itaque
+            placeat rem sint sed soluta minus!.</p>
+        <p> Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Aspernatur magni, ad eligendi alias odio ratione necessitatibus
+            libero officiis illum iste corrupti exercitationem esse itaque
+            placeat rem sint sed soluta minus!.</p>
+        <p> Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Aspernatur magni, ad eligendi alias odio ratione necessitatibus
+            libero officiis illum iste corrupti exercitationem esse itaque
+            placeat rem sint sed soluta minus!.</p>
+    </section>
 
     <script type="text/javascript">
         //jquery for toggle dropdown menus
@@ -72,6 +95,12 @@
 
         closeBtn.addEventListener("click", () =>{
             menu.classList.remove("active");
+        });
+
+        //javascript for the navigation bar effects on scroll
+        window.addEventListener("scroll", function() {
+            var header = document.querySelector("header");
+            header.classList.toggle("sticky", window.scrollY > 0)
         });
 
     </script>

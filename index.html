@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEWBIE - University</title>
+    <link rel="shortcut icon" href="image/logo.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" charset="UTF-8"></script>
+</head>
+<body>
+    <!--Menu-->
+    <header>
+        <a href="#" class="logo"><img src="image/logo.png"> NEWBIE <span>UNIVERSITY</span> </a>
+        <div class="navigation">
+            <ul class="menu">
+                <div class="close-btn"></div>
+                <li class="menu-item"><a href="#">Homepage</a></li>
+                <li class="menu-item">
+                    <a class="sub-btn" href="#">Applicant <i class='fas fa-angle-down'></i></a>
+                    <ul class="sub-menu">
+                        <li class="sub-item"><a href="#">Applicant Register</a></li>
+                        <li class="sub-item"><a href="#">Job Search</a></li>
+                    </ul>
+                </li>
+                <li class="menu-item">
+                    <a class="sub-btn" href="#">Recruiter<i class='fas fa-angle-down'></i></a>
+                    <ul class="sub-menu">
+                        <li class="sub-item"><a href="#">Recruiter Registration</a></li>
+                        <li class="sub-item"><a href="#">Post recruitment jobs</a></li>
+                        <li class="sub-item"><a href="#">Dashboard</a></li>
+                        <li class="sub-item more">
+                            <a class="more-btn" href="#">More Items <i class="fas fa-angle-right"></i></a>
+                            <ul class="more-menu">
+                                <li class="more-item"><a href="#">More Item 01</a></li>
+                                <li class="more-item"><a href="#">More Item 02</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li class="menu-item"><a href="#">Student Support & Corporate Relations</a></li>
+                <li class="menu-item"><a href="#">Sign in</a></li>
+                <li class="menu-item"><a href="#">How to use the job portal</a></li>
+            </ul>
+        </div>
+        <div class="menu-btn"></div>
+    </header>
+
+    <script type="text/javascript">
+        //jquery for toggle dropdown menus
+        $(document).ready(function(){
+            //toggle sub menus
+            $(".sub-btn").click(function(){
+                $(this).next(".sub-menu").slideToggle();
+            });
+
+            //toggle more-menus
+            $(".more-btn").click(function(){
+                $(this).next(".more-menu").slideToggle();
+            });
+        });
+
+        //javascript for the responsive navigation menu
+        var menu = document.querySelector(".menu");
+        var menuBtn = document.querySelector(".menu-btn");
+        var closeBtn = document.querySelector(".close-btn");
+
+        menuBtn.addEventListener("click", () => {
+            menu.classList.add("active");
+        });
+
+        closeBtn.addEventListener("click", () =>{
+            menu.classList.remove("active");
+        });
+
+    </script>
+
+</body>
+</html>
